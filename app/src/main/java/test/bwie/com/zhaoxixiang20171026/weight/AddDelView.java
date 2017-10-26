@@ -21,6 +21,7 @@ public class AddDelView extends LinearLayout{
     private int count=1;
     private OnItemClick onItemClick;
 
+
     public interface OnItemClick {
         public void onItemAddClick(int count);
 
