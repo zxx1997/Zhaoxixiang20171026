@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/item_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:src="@mipmap/ic_launcher_round"/>
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="名称"
+                android:textSize="30dp"/>
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格"
+                android:textSize="30dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总数"
+                android:textSize="30dp"/>
+            <TextView
+                android:id="@+id/item_sumprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总价"
+                android:textSize="30dp"/>
+        </LinearLayout>
+        <test.bwie.com.zhaoxixiang20171026.weight.AddDelView
+            android:id="@+id/adv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></test.bwie.com.zhaoxixiang20171026.weight.AddDelView>
+        <Button
+            android:id="@+id/item_bt"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:text="删除"/>
+
+    </LinearLayout>
+</LinearLayout>
