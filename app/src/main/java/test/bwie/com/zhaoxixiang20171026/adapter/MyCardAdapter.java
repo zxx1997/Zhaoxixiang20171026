@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -103,6 +104,17 @@ public class MyCardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 }
             }
         });
+        myView.bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                list.remove(1);
+                MyCountEvent myCountEvent=new MyCountEvent();
+                myCountEvent.setNum(-1);
+                myCountEvent.setPrice(-bean.getPrice());
+                EventBus.getDefault().post(myCountEvent);
+                notifyDataSetChanged();
+            }
+        });
 
     }
     //判断复选框是否全部选中
@@ -153,6 +165,7 @@ public class MyCardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         private CheckBox cb;
         private TextView title,price,num,sum_price;
         private AddDelView adv;
+        private Button bt;
         public MyView(View itemView) {
             super(itemView);
             cb=itemView.findViewById(R.id.item_cb);
@@ -161,6 +174,7 @@ public class MyCardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             num=itemView.findViewById(R.id.item_sum);
             sum_price=itemView.findViewById(R.id.item_sumprice);
             adv=itemView.findViewById(R.id.adv);
+            bt=itemView.findViewById(R.id.item_bt);
         }
     }
 
